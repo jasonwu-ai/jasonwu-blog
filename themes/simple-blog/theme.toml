@@ -1,0 +1,12 @@
+name = "simple-blog"
+license = "MIT"
+licenselink = "https://mit-license.org"
+description = "Minimal blog theme for jasonwu.ai"
+homepage = "https://blog.jasonwu.ai"
+tags = ["blog", "minimal"]
+features = ["blog", "responsive"]
+min_version = "0.140.0"
+
+[author]
+  name = "Jason Wu"
+  homepage = "https://jasonwu.ai"

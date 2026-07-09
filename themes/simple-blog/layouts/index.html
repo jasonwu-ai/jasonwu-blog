@@ -1,0 +1,31 @@
+{{ define "main" }}
+  <section class="hero">
+    <h1>{{ site.Params.description }}</h1>
+    <p>Documenting what breaks when you run AI agents in production.</p>
+  </section>
+
+  <section class="recent-posts">
+    <h2>Recent Posts</h2>
+    {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{ $paginator := .Paginate $pages }}
+    <div class="post-list">
+      {{ range $paginator.Pages }}
+        <article class="post-card">
+          <div class="post-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            {{ with .Params.tags }}
+              <span class="post-tags">
+                {{ range . }}
+                  <a href="/tags/{{ . | urlize }}/" class="tag">#{{ . }}</a>
+                {{ end }}
+              </span>
+            {{ end }}
+          </div>
+          <h3 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <div class="post-summary">{{ .Summary | plainify }}</div>
+        </article>
+      {{ end }}
+    </div>
+    {{ template "_internal/pagination.html" . }}
+  </section>
+{{ end }}

@@ -1,3 +1,28 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = 'https://blog.jasonwu.ai/'
+languageCode = 'en-us'
+title = 'Jason Wu — AI Engineering Blog'
+theme = 'simple-blog'
+enableRobotsTXT = true
+[pagination]
+  pagerSize = 5
+
+[params]
+  description = 'Building AI agents in production. Real problems, real solutions.'
+  author = 'Jason Wu'
+
+[menu]
+  [[menu.main]]
+    identifier = 'home'
+    name = 'Home'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    identifier = 'posts'
+    name = 'Posts'
+    url = '/posts/'
+    weight = 2
+  [[menu.main]]
+    identifier = 'about'
+    name = 'About'
+    url = '/about/'
+    weight = 3
