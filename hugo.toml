@@ -3,8 +3,18 @@ languageCode = 'en-us'
 title = 'Jason Wu — AI Engineering Blog'
 theme = 'simple-blog'
 enableRobotsTXT = true
+enableGitInfo = true
+
+[outputs]
+  home = ['HTML', 'RSS']
+  section = ['HTML', 'RSS']
+
+[outputFormats.RSS]
+  mediatype = 'application/rss+xml'
+  baseName = 'index'
+
 [pagination]
-  pagerSize = 5
+  pagerSize = 10
 
 [params]
   description = 'Building AI agents in production. Real problems, real solutions.'

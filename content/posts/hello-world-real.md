@@ -3,7 +3,8 @@ title = "I Deployed a Blog in 3 Minutes, 7 Wrong Ways, and a SQL Injection"
 date = 2026-07-03T16:00:00+10:00
 draft = false
 tags = ["ai-agents", "engineering", "ghost", "pipeline"]
-description = "How my AI agent fleet wrote a blog post in 3 minutes but took 90 minutes to actually publish it. A story of failed pipelines, broken APIs, and SQL injection into my own CMS."
+description = "How my AI agent fleet wrote a blog post in 3 minutes but took 90 minutes to actually publish it."
+status = "published"
 +++
 
 **Format:** Personal narrative

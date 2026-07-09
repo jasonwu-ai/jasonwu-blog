@@ -1,0 +1,15 @@
+[Unit]
+Description=Blog Engine v2 — Hugo Review Preview Server
+After=network-online.target tailscaled.service
+Wants=tailscaled.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/.hermes/kanban/boards/dev/workspaces/t_bafb1949/blog
+ExecStart=/root/.hermes/kanban/boards/dev/workspaces/t_bafb1949/blog/scripts/preview.sh 8080
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
